@@ -17,7 +17,7 @@ public class MyAdvice {
 	@Pointcut(value = "execution(* com.kaicom.springaopanno.*ServiceImpl.*(..))")
 	public void pc(){};
 	//前置通知
-	@Before("execution(* com.kaicom.springaopanno.*ServiceImpl.*(..))")
+	@Before("MyAdvice.pc()")
 	public void before(){
 		System.out.println("这是前置通知");
 	}
