@@ -5,7 +5,7 @@ import org.junit.Test;
 public class ProxyTest {
 	private UserService userService = new UserServiceImpl();
 	@Test
-	public void fun1(){
+	public void fun1(){ 
 		UserServiceProxyFactory factory = new UserServiceProxyFactory(userService);
 		UserService userServiceProxy = factory.getUserServiceProxy();
 		userServiceProxy.insert();
